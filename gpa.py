@@ -1,7 +1,7 @@
-# Filename: gpa.py
-# Author: Michelle Domagala-Tang
-
-#Python program which calculates a student's cumulative gpa in the 12-point and 4.0-point scale
+#File: gpa.py
+#Author: Michelle Domagala-Tang
+#Last Edited: 04-22-2020
+#Brief: Python program built to calculate cumulative GPA
 
 grade_dict = {
     '1DO4 COMP' : ['4','12'],
@@ -19,17 +19,25 @@ grade_dict = {
     '2AA2 ENG MNG' : ['2','12'],
     '2Z03 CALC III' : ['3','10'],
     '2DA4 SYSTEMS' : ['4','12'],
+    '2SO3 PROGRAM' : ['3','10'],
+    '2XA3 SOFTDEV' : ['3','12'],
+    '2DM3 DISCRETE' : ['3','11'],
+    '2FA3 DISCRETE' : ['3', '12'],
+    '2C03 ALGOR' : ['3', '11'],
+    '2XB3 PRACT' : ['3', '11'],
+    '2MA3 MARKET' : ['0', '10'],
+    '2AA4 DEVEL' : ['0', '11']
 }
 
 def main():
     user_input = input("Enter in format 'course_code, course_weighting, grade': \nType exit to escape, calc to calculate gpa, or list for current grades: ")
-    if (user_input == "exit" or user_input == "Exit"):
+    if (user_input.casefold() == "exit"):
         exit()
-    elif (user_input == "calculate" or user_input == "calc" or user_input == "Calculate" or user_input == "calc"):
+    elif (user_input.casefold() == "calculate" or user_input.casefold() == "calc"):
         gpa = calculate_gpa()
         print("Current GPA on 12-pnt Scale: %.2f \nCurrent GPA on 4-pnt Scale: %.2f" % (gpa[0], gpa[1]))
         main()
-    elif (user_input == "list" or user_input == "List"):
+    elif (user_input.casefold() == "list"):
         print_grades()
     else:
         add_to_dict(user_input)
