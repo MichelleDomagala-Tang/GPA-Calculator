@@ -24,9 +24,9 @@ grade_dict = {
     '2DM3 DISCRETE' : ['3','11'],
     '2FA3 DISCRETE' : ['3', '12'],
     '2C03 ALGOR' : ['3', '11'],
-    '2XB3 PRACT' : ['3', '11'],
+    '2XB3 PRACT' : ['3', '12'],
     '2MA3 MARKET' : ['0', '10'],
-    '2AA4 DEVEL' : ['0', '11']
+    '2AA4 DEVEL' : ['4', '12']
 }
 
 def main():
